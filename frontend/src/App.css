@@ -7,6 +7,73 @@
   pointer-events: none;
 }
 
+/* For Signup page */
+.signupmargin{
+  margin-right:25rem;
+  margin-left:25rem;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  
+  background-color: white ;
+}
+.signupbackground{
+  background-color:#3598dc; 
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.signuptextfield{
+  margin-right:5rem;
+  margin-left:5rem;
+}
+
+/* For Login Page */
+.loginmargin{
+  margin-right:30rem;
+  margin-left:30rem;
+  background-color: white ;
+}
+.loginbackground{
+  background-color:#3598dc; 
+  min-height: 100vh;
+  padding-top: 8rem;
+}
+.logintextfield{
+  margin-right:5rem;
+  margin-left:5rem;
+  padding-bottom: 3rem;
+}
+
+/* For Browse Page */
+.browsesearchbar{
+  margin-top: 1rem;
+  margin-left: 35rem;
+}
+
+/* For Addcode Page */
+.addcodemargin{
+  margin-right:25rem;
+  margin-left:25rem;
+  margin-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  
+  background-color: white ;
+}
+.addcodebackground{
+  background-color:#3598dc; 
+  min-height: 100vh;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+.addcodetextfield{
+  margin-right:5rem;
+  margin-left:5rem;
+}
+
+
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
