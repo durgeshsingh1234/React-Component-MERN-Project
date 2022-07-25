@@ -49,7 +49,7 @@ const navigate = useNavigate();
   return (
      <div className='addcodebackground'>
       <div className='addcodemargin'>
-      <h1 className='text-center'> Addcode </h1>
+      <h1 className='text-center' style={{color:'black'}} > Addcode </h1>
          <Formik initialValues={{
               title:'',
               description:'',

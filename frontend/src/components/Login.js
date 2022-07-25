@@ -48,8 +48,8 @@ const navigate = useNavigate();
   });
   return (
     <div className='loginbackground' >
-     <div className='loginmargin'  >
-      <h1 className='text-center' style={{color:"black" }} >Login</h1>
+     <div className='loginmargin'   >
+      <h1 className='text-center' style={{color:"black"}}>Login</h1>
          <Formik initialValues={{
              email:'',
               password:'',

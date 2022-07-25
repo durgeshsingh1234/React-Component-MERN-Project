@@ -6,6 +6,7 @@ import Signup from './components/Signup'
 import Login from './components/Login'
 import Addcode from './components/Addcode'
 import Browse from './components/Browse'
+import Viewer from './components/Viewer'
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
        <Route element={<Login></Login>}path="/login"/>
        <Route element={<Addcode></Addcode>}path="/addcode"/>
        <Route element={<Browse></Browse>}path="/browse"/>
-
+       <Route element={<Viewer></Viewer>}path="/viewer"/>
        </Routes>
     </BrowserRouter>    
   );

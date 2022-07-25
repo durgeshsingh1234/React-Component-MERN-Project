@@ -63,7 +63,7 @@ const Browse = () => {
       }
 
   return (
-    <div>
+    <div className='browsebackground'>
       {/* For Searchbar */}
       <div className='browsesearchbar' >
       <div class="input-group">
@@ -71,7 +71,7 @@ const Browse = () => {
     <input type="search" id="form1" class="form-control" />
     <label class="form-label" for="form1">Search</label>
   </div>
-  <button type="button" class="btn btn-primary">
+  <button type="button" class="btn btn-success">
     <i class="fas fa-search"></i>
   </button>
 </div>

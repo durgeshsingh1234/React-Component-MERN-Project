@@ -33,6 +33,7 @@
   margin-right:30rem;
   margin-left:30rem;
   background-color: white ;
+  padding-top: 3rem;
 }
 .loginbackground{
   background-color:#3598dc; 
@@ -47,8 +48,13 @@
 
 /* For Browse Page */
 .browsesearchbar{
-  margin-top: 1rem;
+  
   margin-left: 35rem;
+  padding-top: 2rem;
+}
+.browsebackground{
+  background-color: #ff5733;
+  min-height: 100vh;
 }
 
 /* For Addcode Page */
@@ -70,6 +76,25 @@
 .addcodetextfield{
   margin-right:5rem;
   margin-left:5rem;
+}
+
+
+/* For Viewer page */
+.viewerdiv{
+  min-height: 40vh;
+  background-color: red;
+  margin-top: 2rem;
+}
+.viewerdiv2{
+  min-height: 40vh;
+  background-color: red;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.viewer{
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 
