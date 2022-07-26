@@ -1,5 +1,5 @@
 // importing the connection in model
-const {Schema, model} = require('../connection');
+const {Schema, model, Types} = require('../connection');
 
 const schemaObject = new Schema({
     // For Addcode
@@ -7,6 +7,7 @@ const schemaObject = new Schema({
     description:String,
     thumbnail:String,
     code:String,
+    uploadedBy:{type:Types.ObjectId,ref:'users'},
     createdAt:Date,
     
 })

@@ -33,7 +33,10 @@ const navigate = useNavigate();
         title :"well done👍",
         text :"You have done a wonderfull job!!"
          });
-         navigate('/login');
+         response.json().then(data=>{
+            sessionStorage.setItem("user",JSON.stringify(data));
+            navigate('/login');
+         });
     }else{
       console.log('error occured');
     }

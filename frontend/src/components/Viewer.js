@@ -1,9 +1,15 @@
 import React from 'react'
 import {Button} from '@mui/material';
 import JsxParser from 'react-jsx-parser';
+import { useParams } from 'react-router-dom';
 const Viewer = () => {
 
   const raw_code = `<Button variant="contained" color='error'>Nice</Button>`;
+
+  const {id}= useParams();
+
+  
+
  return (
     <div className='viewer'>
         <h3 style={{color:'black'}}> <b>Component Name</b> </h3>
