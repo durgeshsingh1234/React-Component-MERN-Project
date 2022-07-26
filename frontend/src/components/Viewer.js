@@ -8,7 +8,6 @@ const Viewer = () => {
 
   const {id}= useParams();
 
-  
 
  return (
     <div className='viewer'>
