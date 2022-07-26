@@ -33,7 +33,7 @@
   margin-right:30rem;
   margin-left:30rem;
   background-color: white ;
-  padding-top: 3rem;
+  padding-top: 2rem;
 }
 .loginbackground{
   background-color:#3598dc; 
@@ -96,7 +96,26 @@
   margin-left: 2rem;
   margin-right: 2rem;
 }
-
+.forgetpasswordform{
+  margin-top: 8rem;
+  margin-left: 30rem;
+  margin-right: 30rem;
+  background-color: aliceblue;
+}
+.forgetpasswordbackground{
+  background-color: #3598dc;
+  min-height: 100hv;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+}
+.forgetpasswordtextfield{
+  margin-left:5rem ;
+  margin-right:5rem ;
+  margin-bottom: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  
+}
 
 
 @media (prefers-reduced-motion: no-preference) {

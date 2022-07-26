@@ -7,6 +7,8 @@ import Login from './components/Login'
 import Addcode from './components/Addcode'
 import Browse from './components/Browse'
 import Viewer from './components/Viewer'
+import Forgetpassword from './components/Forgetpassword'
+
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
        <Route element={<Addcode></Addcode>}path="/addcode"/>
        <Route element={<Browse></Browse>}path="/browse"/>
        <Route element={<Viewer></Viewer>}path="/viewer"/>
+       <Route element={<Forgetpassword></Forgetpassword>}path="/Forgetpassword"/>
+      
        </Routes>
     </BrowserRouter>    
   );

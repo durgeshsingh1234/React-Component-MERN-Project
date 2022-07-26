@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {TextField,Button} from '@mui/material'
 import {Formik} from "formik"
 import Swal from 'sweetalert2'
@@ -54,9 +55,6 @@ const navigate = useNavigate();
       .min(2, 'Too Short!')
       .max(50, 'Too Long!')
       .required('Required'),
-      age: Yup.number()
-      .min(1, 'Too Short!')
-      .required('Required'),
     email: Yup.string().email('Invalid email').required('Required'),
   });
   return (
@@ -66,7 +64,7 @@ const navigate = useNavigate();
       <h4 className='text-center' style={{color:"black" }} >Please fill this form to create an account!</h4>
          <Formik initialValues={{
               name:'',
-              age:'',
+              
               email:'',
               password:'',
               mobile:'',
@@ -75,14 +73,14 @@ const navigate = useNavigate();
               {({values,handleChange,handleSubmit,errors})=>(
                <form  className='signuptextfield' onSubmit={handleSubmit}>
                
-               <TextField  value={values.name} onChange={handleChange} id="name" sx={{mt:3}} fullWidth label="Full Name" helperText={errors.name} error={errors.name?true:false} />
-               <TextField  value={values.age} onChange={handleChange} id="age" sx={{mt:3}} fullWidth label="Age" helperText={errors.age} error={errors.age?true:false} />
+               <TextField  value={values.name} onChange={handleChange} id="name" sx={{mt:3}} fullWidth label="Full Name" helperText={errors.name} error={errors.name?true:false}  />
                <TextField  value={values.email} onChange={handleChange} id="email" sx={{mt:3}} fullWidth label="Email" helperText={errors.email} error={errors.email?true:false} />
                <TextField  value={values.mobile} onChange={handleChange} id="mobile" sx={{mt:3}} fullWidth label="Mobile Number" helperText={errors.mobile} error={errors.mobile?true:false} />
                <TextField  value={values.password} onChange={handleChange} id="password" sx={{mt:3}} fullWidth label="Create Password" type="password" helperText={errors.password} error={errors.password?true:false}/>
                <TextField  value={values.confirmpassword} onChange={handleChange} id="confirmpassword" sx={{mt:3}} fullWidth label="Confirm Password" type="password" helperText={errors.password} error={errors.password?true:false}/>
-               <Button  variant="contained" type="submit" color='secondary' sx={{mt:5}}>Sign Up</Button>
-               
+               <Button  variant="contained" type="submit" color='secondary' sx={{mt:5}}>Create Account</Button>
+               <h6 className='text-center'>Already a member? <Link to='/login'>Login</Link></h6>
+             
                </form>
 
               )}              

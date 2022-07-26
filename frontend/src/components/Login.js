@@ -3,7 +3,7 @@ import {TextField,Button} from '@mui/material'
 import {Formik} from "formik"
 import Swal from 'sweetalert2'
 import * as Yup from 'yup';
-import {useNavigate} from 'react-router-dom'
+import {useNavigate ,Link} from 'react-router-dom'
 const Login = () => {
 
 const navigate = useNavigate();
@@ -50,6 +50,9 @@ const navigate = useNavigate();
     <div className='loginbackground' >
      <div className='loginmargin'   >
       <h1 className='text-center' style={{color:"black"}}>Login</h1>
+      <h4 className='text-center' style={{color:"black"}}>Welcome back! Login to access your account.</h4>
+      <h5 className='text-center' style={{color:"black"}}>Did you <Link to='/forgetpassword'>Forget Your Password?</Link> </h5>
+
          <Formik initialValues={{
              email:'',
               password:'',
