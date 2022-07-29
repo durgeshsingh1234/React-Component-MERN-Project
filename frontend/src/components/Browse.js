@@ -41,7 +41,7 @@ const Browse = () => {
           </div>
         </div>
       </div>
-          ))
+            ))
         }
       }
 

@@ -3,12 +3,13 @@ const {Schema, model} = require('../connection');
 
 const schemaObject = new Schema({
     // For Signup and Login 
-    name:String,
+    fname:String,
+    lname:String,
     email:String,
-    mobile:String,
-    age:Number,
+    // mobile:String,
+    // age:Number,
     password: String, 
-    confirmpassword:String,
+    // confirmpassword:String,
 })
 
 module.exports = model('users',schemaObject);

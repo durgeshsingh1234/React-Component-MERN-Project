@@ -23,14 +23,14 @@ const Navbar = () => {
        
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           
-          <a class="navbar-brand mt-2 mt-lg-0" href="#">
+          {/* <a class="navbar-brand mt-2 mt-lg-0" href="#">
             <img
               src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
               height="15"
               alt="MDB Logo"
               loading="lazy"
             />
-          </a>
+          </a> */}
           
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           
@@ -58,9 +58,9 @@ const Navbar = () => {
         
         <div class="d-flex align-items-center">
           
-          <a class="text-reset me-3" href="#">
+          {/* <a class="text-reset me-3" href="#">
             <i class="fas fa-shopping-cart"></i>
-          </a>
+          </a> */}
     
           
           <div class="dropdown">
@@ -72,8 +72,8 @@ const Navbar = () => {
               data-mdb-toggle="dropdown"
               aria-expanded="false"
             >
-              <i class="fas fa-bell"></i>
-              <span class="badge rounded-pill badge-notification bg-danger">1</span>
+              {/* <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger">1</span> */}
             </a>
             <ul
               class="dropdown-menu dropdown-menu-end"

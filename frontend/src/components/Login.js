@@ -17,7 +17,7 @@ const navigate = useNavigate();
     //3.data
     // 4.data format 
 
-    const response = await fetch('http://localhost:5000/user/add',{
+    const response = await fetch('http://localhost:5000/user/authenticate',{
       method:'POST',
       // converting javascript object to JSON with stringify
        body:JSON.stringify(formdata),  
@@ -33,12 +33,18 @@ const navigate = useNavigate();
         title :"well done👍",
         text :"You have done a wonderfull job!!"
          });
-         response.json().then(data=>{
-            sessionStorage.setItem("user",JSON.stringify(data));
-            navigate('/login');
-         });
-    }else{
-      console.log('error occured');
+         navigate("/signup")
+         const data = await response.json();
+         sessionStorage.setItem("user", JSON.stringify(data));
+    }
+    else{
+      console.log('Login Error');
+      Swal.fire({
+        icon: "error",
+        title: "Try Again",
+        text: "Check email and password",
+
+      })
     }
 
   }
@@ -64,7 +70,7 @@ const navigate = useNavigate();
                <form  className='logintextfield' onSubmit={handleSubmit}>
                <TextField  value={values.email} onChange={handleChange} id="email" sx={{mt:3}} fullWidth label="Email" helperText={errors.email} error={errors.email?true:false} />
                <TextField  value={values.password} onChange={handleChange} id="password" sx={{mt:3}} fullWidth label="Password" type="password" helperText={errors.password} error={errors.password?true:false}/>
-               <Button variant="contained" type="submit" color='secondary' sx={{mt:5}}>Login</Button>
+               <button type='submit' className='btn btn-primary'>Log In</button>
                </form>
                )}              
             </Formik>

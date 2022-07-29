@@ -8,37 +8,44 @@
 }
 
 /* For Signup page */
-.signupmargin{
-  margin-right:25rem;
-  margin-left:25rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+/* .signupmargin{
   
-  background-color: white ;
 }
 .signupbackground{
-  background-color:#3598dc; 
-  min-height: 100vh;
-  padding-top: 3rem;
-  padding-bottom: 1rem;
+  width: 500px;
+  height: 100px;
+  margin: 0 auto; 
+  
+
+  
+}
+.signupbackground p {
+  padding-top: 2%;  
 }
 .signuptextfield{
-  margin-right:5rem;
-  margin-left:5rem;
-}
+  
+  
+ 
+
+} */
 
 /* For Login Page */
-.loginmargin{
+/* .loginmargin{
   margin-right:30rem;
   margin-left:30rem;
   background-color: white ;
-  padding-top: 2rem;
-}
+  padding-top: 2rem; */
+/* } */
 .loginbackground{
-  background-color:#3598dc; 
-  min-height: 100vh;
-  padding-top: 8rem;
+  /* background-color:#3598dc;  */
+  /* min-height: 100vh;
+  padding-top: 8rem; */
+  width: 500px;
+  height: 100px;
+  margin: 0 auto; 
+}
+.loginbackground p{
+  padding-top: 2%; 
 }
 .logintextfield{
   margin-right:5rem;
@@ -58,7 +65,7 @@
 }
 
 /* For Addcode Page */
-.addcodemargin{
+/* .addcodemargin{
   margin-right:25rem;
   margin-left:25rem;
   margin-bottom: 5rem;
@@ -66,12 +73,16 @@
   padding-bottom: 3rem;
   
   background-color: white ;
-}
+} */
 .addcodebackground{
   background-color:#3598dc; 
-  min-height: 100vh;
+  width: 500px;
+  height: 100px;
+  margin: 0 auto; 
+  /* min-height: 100vh;
   padding-top: 3rem;
-  padding-bottom: 1rem;
+  padding-bottom: 1rem; */
+
 }
 .addcodetextfield{
   margin-right:5rem;

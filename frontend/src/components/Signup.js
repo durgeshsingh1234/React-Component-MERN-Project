@@ -58,30 +58,198 @@ const navigate = useNavigate();
     email: Yup.string().email('Invalid email').required('Required'),
   });
   return (
+    
     <div className='signupbackground' >
      <div className='signupmargin'  >
-      <h1 className='text-center' style={{color:"black" }} >SignUp here</h1>
+     <h1 className='text-center' style={{color:"black" }} >SignUp here</h1>
       <h4 className='text-center' style={{color:"black" }} >Please fill this form to create an account!</h4>
+     
          <Formik initialValues={{
-              name:'',
-              
+              fname:'',
+              lname:'',
               email:'',
               password:'',
-              mobile:'',
-              confirmpassword:''
+              // mobile:'',
+              // confirmpassword:''
             }} onSubmit={userSubmit} validationSchema={SignupSchema} >
               {({values,handleChange,handleSubmit,errors})=>(
-               <form  className='signuptextfield' onSubmit={handleSubmit}>
-               
-               <TextField  value={values.name} onChange={handleChange} id="name" sx={{mt:3}} fullWidth label="Full Name" helperText={errors.name} error={errors.name?true:false}  />
-               <TextField  value={values.email} onChange={handleChange} id="email" sx={{mt:3}} fullWidth label="Email" helperText={errors.email} error={errors.email?true:false} />
-               <TextField  value={values.mobile} onChange={handleChange} id="mobile" sx={{mt:3}} fullWidth label="Mobile Number" helperText={errors.mobile} error={errors.mobile?true:false} />
-               <TextField  value={values.password} onChange={handleChange} id="password" sx={{mt:3}} fullWidth label="Create Password" type="password" helperText={errors.password} error={errors.password?true:false}/>
-               <TextField  value={values.confirmpassword} onChange={handleChange} id="confirmpassword" sx={{mt:3}} fullWidth label="Confirm Password" type="password" helperText={errors.password} error={errors.password?true:false}/>
-               <Button  variant="contained" type="submit" color='secondary' sx={{mt:5}}>Create Account</Button>
-               <h6 className='text-center'>Already a member? <Link to='/login'>Login</Link></h6>
+                        <form onSubmit={handleSubmit}>
+                    
+                        <div class="row">
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                
+                                class="form-control"
+                              />
+                              <input value={values.email} onChange={handleChange} id="fname" />
+                              <label
+                                class="form-label" 
+                                
+                                for="form3Example1"
+                                style={{"marginLeft": "0px"}}
+                                >First name</label
+                              >
+                              <div class="form-notch">
+                                <div
+                                  class="form-notch-leading"
+                                  style={{"width": "9px"}}
+                                ></div>
+                                <div
+                                  class="form-notch-middle"
+                                  style={{"width": "68.8px"}}
+                                ></div>
+                                <div class="form-notch-trailing"></div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-6 mb-4">
+                            <div class="form-outline">
+                              <input
+                                type="text"
+                                // id="form3Example2"
+                                class="form-control"
+                              />
+                              <input value={values.email} onChange={handleChange} id="lname" />
+                              <label
+                                class="form-label"
+                                for="form3Example2"
+                                style={{"marginLeft": "0px"}}
+                                >Last name</label
+                              >
+                              <div class="form-notch">
+                                <div
+                                  class="form-notch-leading"
+                                  style={{"width":"9px"}}
+                                ></div>
+                                <div
+                                  class="form-notch-middle"
+                                  style={{"width": "68px"}}
+                                ></div>
+                                <div class="form-notch-trailing"></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                 
+                        <div class="form-outline mb-4">
+                          <input
+                            type="email"
+                            // id="form3Example3"
+                            class="form-control active"
+                            autocompleted=""
+                          />
+                          <input value={values.email} onChange={handleChange} id="email" />
+                          <label
+                            class="form-label"
+                            for="form3Example3"
+                            style={{"marginLeft": "0px"}}
+                            >Email address</label
+                          >
+                          <div class="form-notch">
+                            <div
+                              class="form-notch-leading"
+                              style={{"width": "9px"}}
+                            ></div>
+                            <div
+                              class="form-notch-middle"
+                              style={{"width": "88.8px"}}
+                            ></div>
+                            <div class="form-notch-trailing"></div>
+                          </div>
+                        </div>
+                      
+                        <div class="form-outline mb-4">
+                          <input
+                            type="password"
+                            // id="form3Example4"
+                            class="form-control active"
+                            autocompleted=""
+                          />
+                          <input value={values.email} onChange={handleChange} id="password" />
+                          <label
+                            class="form-label"
+                            for="form3Example4"
+                            style={{"marginLeft": "0px"}}
+                            >Password</label
+                          >
+                          <div class="form-notch">
+                            <div
+                              class="form-notch-leading"
+                              style={{"width": "9px"}}
+                            ></div>
+                            <div
+                              class="form-notch-middle"
+                              style={{"width": "64.8px"}}
+                            ></div>
+                            <div class="form-notch-trailing"></div>
+                          </div>
+                        </div>
              
-               </form>
+                        <div
+                          class="form-check d-flex justify-content-center mb-4"
+                        >
+                          <input
+                            class="form-check-input me-2"
+                            type="checkbox"
+                            value=""
+                            // id="form2Example33"
+                            checked=""
+                          />
+                          <label class="form-check-label" for="form2Example33"
+                            >Subscribe to our newsletter</label
+                          >
+                        </div>
+                       
+                        <button
+                          type="submit"
+                          class="btn btn-primary btn-block mb-4"
+                          aria-controls="#picker-editor"
+                        >
+                          Sign up
+                        </button>
+                   
+                        <div class="text-center">
+                          <p>or sign up with:</p>
+                          <button
+                            type="button"
+                            class="btn btn-link btn-floating mx-1"
+                          >
+                            <i
+                              class="fab fa-facebook-f"
+                              aria-controls="#picker-editor"
+                            ></i>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-link btn-floating mx-1"
+                          >
+                            <i
+                              class="fab fa-google"
+                              aria-controls="#picker-editor"
+                            ></i>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-link btn-floating mx-1"
+                          >
+                            <i
+                              class="fab fa-twitter"
+                              aria-controls="#picker-editor"
+                            ></i>
+                          </button>
+                          <button
+                            type="button"
+                            class="btn btn-link btn-floating mx-1"
+                          >
+                            <i
+                              class="fab fa-github"
+                              aria-controls="#picker-editor"
+                            ></i>
+                          </button>
+                        </div>
+                      </form>
 
               )}              
             </Formik>

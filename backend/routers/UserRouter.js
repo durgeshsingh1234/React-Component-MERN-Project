@@ -1,5 +1,6 @@
 // for performing user database operations
 const express = require('express');
+const { findOne } = require('../models/Usermodel');
 const router = express.Router();
 
 // importing user model
@@ -35,6 +36,26 @@ router.get('/getall',(req,res)=>{
     })
 })
 
+router.post('/authenticate' , (req,res) => {
+    const formdata = req.body;
+    Model.findOne({email: formdata.email, password: formdata.password})
+    .then((result) => {
+        console.log(result);
+        if(result){
+            console.log('login success');
+            res.json(result);
+        }
+        else{
+            console.log('login failed');
+            res.status(400),json({messsage: 'login failed'});
+        }
+    })
+
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+    });
 // colon(:) shows that it is a parameter
 
 module.exports = router;
