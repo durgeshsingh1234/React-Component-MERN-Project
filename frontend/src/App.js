@@ -10,6 +10,7 @@ import Viewer from './components/Viewer'
 import Forgetpassword from './components/Forgetpassword'
 import Authorisor from './components/Auth'
 import { useMediaQuery } from 'react-responsive'
+import Home from './components/Home';
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
     <BrowserRouter>
     <Navbar></Navbar>
        <Routes>
+       <Route element={<Home />}path="/"/>
        <Route element={<Signup></Signup>}path="/signup"/>
        <Route element={<Login></Login>}path="/login"/>
        <Route element={

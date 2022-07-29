@@ -9,7 +9,7 @@ const schemaObject = new Schema({
     code:String,
     uploadedBy:{type:Types.ObjectId,ref:'users'},
     createdAt:Date,
-    
+    imports : String,
 })
 
 module.exports = model('components',schemaObject);
