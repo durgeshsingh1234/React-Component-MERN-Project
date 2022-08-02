@@ -64,30 +64,7 @@
   min-height: 100vh;
 }
 
-/* For Addcode Page */
-/* .addcodemargin{
-  margin-right:25rem;
-  margin-left:25rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  
-  background-color: white ;
-} */
-.addcodebackground{
-  /* background-color:#3598dc;  */
-  width: 500px;
-  height: 100px;
-  margin: 0 auto; 
-  /* min-height: 100vh;
-  padding-top: 3rem;
-  padding-bottom: 1rem; */
 
-}
-.addcodetextfield{
-  margin-right:5rem;
-  margin-left:5rem;
-}
 
 
 /* For Viewer page */

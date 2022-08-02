@@ -1,9 +1,11 @@
 import React, { useState } from "react"
-import { TextField, Button } from "@mui/material"
 import { Formik } from "formik"
 import Swal from "sweetalert2"
 import * as Yup from "yup"
 import { useNavigate } from "react-router-dom"
+import './Addcode.css';
+import { Card } from '@mui/material';
+
 const Addcode = () => {
   const navigate = useNavigate()
 
@@ -64,44 +66,64 @@ const Addcode = () => {
     // email: Yup.string().email('Invalid email').required('Required'),
   })
   return (
-    <div className="addcodebackground">
-      <div className="addcodemargin">
-        <h1 className="text-center" style={{ color: "black" }}>
-          {" "}
-          Addcode{" "}
-        </h1>
+    <div className="addcodebackground ">
+      <div className="addcodemargin ">
         <Formik
           initialValues={{
             title: "",
             description: "",
-            thumbnail: "",
             code: "",
+            imports:"",
             uploadedBy : currentUser._id,
             createdAt: new Date(),
           }}
           onSubmit={userSubmit}
           validationSchema={SignupSchema}>
           {({ values, handleChange, handleSubmit, errors }) => (
-            <form className="addcodetextfield" onSubmit={handleSubmit}>
-              <TextField
-                value={values.title}
-                onChange={handleChange}
-                id="title"
-                sx={{ mt: 5 }}
-                fullWidth
-                label="Title"
-                helperText={errors.name}
-                error={errors.name ? true : false}
-              />
-              <TextField value={values.description} onChange={handleChange} id="description" sx={{ mt: 3 }} fullWidth label="Description" />
-              
-              <TextField value={values.code} onChange={handleChange} id="code" sx={{ mt: 3 }} fullWidth label="Code" />
-              <label>Select Image</label>
-              <input onChange={uploadThumbnail} type="file" />
-              <Button variant="contained" type="submit" color="success" sx={{ mt: 5 }}>
-                Addcode
-              </Button>
-            </form>
+            <form className="form" onSubmit={handleSubmit}>
+
+              <div className="row">
+                <div className="col">
+              <Card className="Addcodecard" >
+                 
+            <div class="form-outline mb-4">
+              <input type="text" id="title" class="form-control" value={values.text} onChange={handleChange} helperText={errors.name}    error={errors.name ? true : false}/>
+              <label class="form-label" for="form4Example1">Title</label>
+            </div>
+          
+            
+            <div class="form-outline mb-4">
+              <input type="text" value={values.description} onChange={handleChange} id="description" class="form-control" />
+              <label class="form-label" for="form4Example2">Description</label>
+            </div>
+
+            <div class="form-outline mb-4">
+              <input type="text" value={values.imports} onChange={handleChange} id="imports" class="form-control" />
+              <label class="form-label" for="form4Example2">Imports</label>
+            </div>
+          
+            
+            <div class="form-outline mb-4">
+              <textarea type="text" class="form-control" value={values.code} onChange={handleChange} id="code" rows="4"></textarea>
+              <label class="form-label" for="form4Example3">Code</label>
+            </div>
+            
+             <label>Select Image </label>
+             <br />
+            <input onChange={uploadThumbnail} type="file" />
+          <button type="submit" class="btn btn-primary btn-block mb-4 addcodebutton">Addcode</button>
+          </Card>
+          </div>
+          
+          {/* <Card>
+          <div className="col">
+          <img  src="https://ih1.redbubble.net/image.624068452.2428/st,small,507x507-pad,600x600,f8f8f8.u2.jpg" alt="code image" />
+          
+          </div>
+          </Card> */}
+          </div>
+          </form>
+
           )}
         </Formik>
       </div>

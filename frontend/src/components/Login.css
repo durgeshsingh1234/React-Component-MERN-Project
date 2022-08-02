@@ -1,0 +1,18 @@
+.logincard{
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+.loginbackground{
+    background-color: brown;
+    padding-top: 3rem;
+}
+.loginform{
+    padding-top: 5rem;
+    
+}
+.loginbackground1{
+    background-color: brown;
+    min-height: 100vh;
+}

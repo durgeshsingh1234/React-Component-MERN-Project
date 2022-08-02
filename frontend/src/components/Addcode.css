@@ -1,0 +1,38 @@
+.addcodebutton{
+    margin-top: 2rem;
+}
+.form{
+   
+    margin-left: 7rem;
+    margin-right: 10rem;
+    
+    
+    
+}
+.imageclass{
+padding-bottom: 10rem;
+margin-bottom: 10rem;
+margin-top:5rem ;
+}
+.textfield{
+    margin-top:5rem ; 
+}
+.addcodebackground{
+    background-color: #e18d16;
+    min-height: 100vh;
+    height: 100vh;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+}
+
+.Addcodecard{
+  
+   margin-left: 20rem;
+   margin-right: 20rem;
+   margin-bottom: 2rem;
+   padding-top: 3rem;
+   padding-bottom: 3rem;
+  
+   padding-left: 3rem;
+   padding-right: 3rem;
+}
