@@ -4,7 +4,7 @@ import Swal from "sweetalert2"
 import * as Yup from "yup"
 import { useNavigate } from "react-router-dom"
 import './Addcode.css';
-import { Card } from '@mui/material';
+import { TextField } from "@mui/material";
 
 const Addcode = () => {
   const navigate = useNavigate()
@@ -66,8 +66,10 @@ const Addcode = () => {
     // email: Yup.string().email('Invalid email').required('Required'),
   })
   return (
-    <div className="addcodebackground ">
-      <div className="addcodemargin ">
+    <div className="container">
+    <div className="col-md-4 mx-auto bg-light">
+      <div className="cards mt-5">
+        <div className="card-body">
         <Formik
           initialValues={{
             title: "",
@@ -82,28 +84,57 @@ const Addcode = () => {
           {({ values, handleChange, handleSubmit, errors }) => (
             <form className="form" onSubmit={handleSubmit}>
 
-              <div className="row">
-                <div className="col-md-12">
-              <Card className="Addcodecard" >
+              
                  
             <div class="form-outline mb-4">
-              <input type="text" id="title" class="form-control" value={values.text} onChange={handleChange} helperText={errors.name}    error={errors.name ? true : false}/>
-              <label class="form-label" for="form4Example1">Title</label>
+             
+              <TextField
+                      class="form-control"
+                      value={values.title}
+                      onChange={handleChange}
+                      id="title"
+                      sx={{ mt: 1 }}
+                      fullWidth
+                      label="Title"
+                      type="text"
+                     
+                    />
             </div>
           
             
             <div class="form-outline mb-4">
-              <input type="text" value={values.description} onChange={handleChange} id="description" class="form-control" />
-              <label class="form-label" for="form4Example2">Description</label>
+             
+              <TextField
+                      class="form-control"
+                      value={values.description}
+                      onChange={handleChange}
+                      id="description"
+                      sx={{ mt: 1 }}
+                      fullWidth
+                      label="Description"
+                      type="text"
+                     
+                    />
             </div>
 
             <div class="form-outline mb-4">
-              <input type="text" value={values.imports} onChange={handleChange} id="imports" class="form-control" />
-              <label class="form-label" for="form4Example2">Imports</label>
+              
+              <TextField
+                      class="form-control"
+                      value={values.imports}
+                      onChange={handleChange}
+                      id="imports"
+                      sx={{ mt: 1 }}
+                      fullWidth
+                      label="Imports"
+                      type="text"
+                     
+                    />
             </div>
           
             
             <div class="form-outline mb-4">
+              
               <textarea type="text" class="form-control" value={values.code} onChange={handleChange} id="code" rows="4"></textarea>
               <label class="form-label" for="form4Example3">Code</label>
             </div>
@@ -111,22 +142,17 @@ const Addcode = () => {
              <label>Select Image </label>
              <br />
             <input onChange={uploadThumbnail} type="file" />
+            <br />
+            <br />
           <button type="submit" class="btn btn-primary btn-block mb-4 addcodebutton">Addcode</button>
-          </Card>
-          </div>
-          
-          {/* <Card>
-          <div className="col">
-          <img  src="https://ih1.redbubble.net/image.624068452.2428/st,small,507x507-pad,600x600,f8f8f8.u2.jpg" alt="code image" />
-          
-          </div>
-          </Card> */}
-          </div>
+
           </form>
 
           )}
         </Formik>
       </div>
+    </div>
+    </div>
     </div>
   )
 }
