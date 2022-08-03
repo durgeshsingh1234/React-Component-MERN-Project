@@ -83,7 +83,7 @@ const Addcode = () => {
             <form className="form" onSubmit={handleSubmit}>
 
               <div className="row">
-                <div className="col">
+                <div className="col-md-12">
               <Card className="Addcodecard" >
                  
             <div class="form-outline mb-4">

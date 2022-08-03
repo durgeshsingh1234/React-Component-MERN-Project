@@ -57,6 +57,10 @@
   .custom6{
     display: none;
   }
-  .signupbackground{
-    min-height: 100hv;
-  }
+ .card-body{
+  height: 75vh;
+ }
+ .formsignup{
+  padding-top: 1rem;
+  
+ }
