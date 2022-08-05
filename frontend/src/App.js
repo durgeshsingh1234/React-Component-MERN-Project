@@ -42,9 +42,8 @@ function App() {
        <Route element={<Home />}path="/"/>
        <Route element={<Signup></Signup>}path="/signup"/>
        <Route element={<Login></Login>}path="/login"/>
-       <Route element={
-        <Authorisor>
-          <Addcode />
+       <Route element={<Authorisor>
+<Addcode />
         </Authorisor>
        }path="/addcode"/>
        <Route element={<Browse></Browse>}path="/browse"/>

@@ -53,7 +53,19 @@
   }
   .custom5{
     position:relative;
+    
   }
   .custom6{
     display: none;
   }
+ .card-body{
+  height: 75vh;
+ }
+ .formsignup{
+  padding-top: 1rem;
+  
+ }
+ .overflow-hidden{
+  height: 695px;
+ }
+ 

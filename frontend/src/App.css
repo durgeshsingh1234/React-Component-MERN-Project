@@ -36,22 +36,22 @@
   background-color: white ;
   padding-top: 2rem; */
 /* } */
-.loginbackground{
+/* .loginbackground{ */
   /* background-color:#3598dc;  */
   /* min-height: 100vh;
   padding-top: 8rem; */
-  width: 500px;
+  /* width: 500px;
   height: 100px;
   margin: 0 auto; 
-}
-.loginbackground p{
+} */
+/* .loginbackground p{
   padding-top: 2%; 
 }
 .logintextfield{
   margin-right:5rem;
   margin-left:5rem;
   padding-bottom: 3rem;
-}
+} */
 
 /* For Browse Page */
 .browsesearchbar{
@@ -64,30 +64,7 @@
   min-height: 100vh;
 }
 
-/* For Addcode Page */
-/* .addcodemargin{
-  margin-right:25rem;
-  margin-left:25rem;
-  margin-bottom: 5rem;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  
-  background-color: white ;
-} */
-.addcodebackground{
-  /* background-color:#3598dc;  */
-  width: 500px;
-  height: 100px;
-  margin: 0 auto; 
-  /* min-height: 100vh;
-  padding-top: 3rem;
-  padding-bottom: 1rem; */
 
-}
-.addcodetextfield{
-  margin-right:5rem;
-  margin-left:5rem;
-}
 
 
 /* For Viewer page */

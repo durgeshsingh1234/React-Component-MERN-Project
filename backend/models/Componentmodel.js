@@ -5,7 +5,7 @@ const schemaObject = new Schema({
     // For Addcode
     title:String,
     description:String,
-    thumbnail:String,
+    // thumbnail:String,
     code:String,
     uploadedBy:{type:Types.ObjectId,ref:'users'},
     createdAt:Date,

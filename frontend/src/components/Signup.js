@@ -3,7 +3,7 @@ import { Formik } from "formik"
 import Swal from "sweetalert2"
 import * as Yup from "yup"
 import "./Signup.css"
-import { useNavigate } from "react-router-dom"
+import { useNavigate,Link } from "react-router-dom"
 const Signup = () => {
   const navigate = useNavigate()
 
@@ -45,12 +45,8 @@ const Signup = () => {
     email: Yup.string().email("Invalid email").required("Required"),
   })
   return (
-    <div className="signupbackground">
-      <div className="signupmargin">
-        {/* <h1 className='text-center' style={{color:"black" }} >SignUp here</h1>
-      <h4 className='text-center' style={{color:"black" }} >Please fill this form to create an account!</h4> */}
-
-        {/* Started */}
+    // <div className="signupbackground">
+    //   <div className="signupmargin">
 
         <div id="preview" class="preview">
           <div className="custom6"></div>
@@ -62,13 +58,10 @@ const Signup = () => {
                     <div class="row gx-lg-5 align-items-center mb-5">
                       <div class="col-lg-6 mb-5 mb-lg-0 custom4">
                         <h1 class="my-5 display-3 fw-bold ls-tight custom3">
-                          <span>The best offer</span> <br />
-                          <span className="custom2">for your business</span>
+                          <span>WELCOME TO OUR WEBSITE ...</span> <br />
+                          <span className="custom2">Create your free account .</span>
                         </h1>
-                        <p class="mb-4 opacity-70 custom1">
-                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus, expedita iusto veniam atque, magni tempora
-                          mollitia dolorum consequatur nulla, neque debitis eos reprehenderit quasi ab ipsum nisi dolorem modi. Quos?
-                        </p>
+
                       </div>
                       <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
                         <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
@@ -86,7 +79,9 @@ const Signup = () => {
                               // validationSchema={SignupSchema}
                               >
                               {({ values, handleChange, handleSubmit, errors }) => (
-                                <form onSubmit={handleSubmit}>
+                                <form onSubmit={handleSubmit} className='formsignup' >
+                                  <h1 className="text-center" >Register</h1>
+                                  <br />
                                   <div class="row">
                                     <div class="col-md-6 mb-4">
                                       <div class="form-outline">
@@ -157,26 +152,29 @@ const Signup = () => {
                                     </div>
                                   </div>
 
-                                  <div class="form-check d-flex justify-content-center mb-4">
+                                  {/* <div class="form-check d-flex justify-content-center mb-4">
                                     <input
                                       class="form-check-input me-2"
                                       type="checkbox"
                                       value=""
                                       // id="form2Example33"
-                                      checked=""
+                                      checked=""  
                                     />
                                     <label class="form-check-label" for="form2Example33">
                                       Subscribe to our newsletter
                                     </label>
-                                  </div>
+                                  </div> */}
 
                                   <button type="submit" class="btn btn-primary btn-block mb-4" aria-controls="#picker-editor">
                                     Sign up
                                   </button>
 
                                   <div class="text-center">
-                                    <p>or sign up with:</p>
-                                    <button type="button" class="btn btn-link btn-floating mx-1">
+                                    <p>Already Registered??</p>
+
+                                    <Link to='/login'>Login</Link>
+
+                                    {/* <button type="button" class="btn btn-link btn-floating mx-1">
                                       <i class="fab fa-facebook-f" aria-controls="#picker-editor"></i>
                                     </button>
                                     <button type="button" class="btn btn-link btn-floating mx-1">
@@ -187,7 +185,7 @@ const Signup = () => {
                                     </button>
                                     <button type="button" class="btn btn-link btn-floating mx-1">
                                       <i class="fab fa-github" aria-controls="#picker-editor"></i>
-                                    </button>
+                                    </button> */}
                                   </div>
                                 </form>
                               )}
@@ -202,8 +200,8 @@ const Signup = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+    //   </div>
+    // </div>
   )
 }
 export default Signup
