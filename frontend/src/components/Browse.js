@@ -9,7 +9,6 @@ const Browse = () => {
   const [loading, setLoading] = useState(false);
 
   const navigate= useNavigate();
-
     const getDataFromBackend = async () => {
         setLoading(true);
         const res = await fetch(url+'/components/getall');
