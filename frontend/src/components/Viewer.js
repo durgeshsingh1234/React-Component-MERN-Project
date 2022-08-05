@@ -6,9 +6,7 @@ const Viewer = () => {
 
   const raw_code = `<Button variant="contained" color='error'>Nice</Button>`;
 
-  const {id}= useParams();
-  
-
+  const { id }= useParams();
 
  return (
     <div className='viewer'>
