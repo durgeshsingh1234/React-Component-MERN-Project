@@ -133,7 +133,7 @@ const Addcode = () => {
                   </div>
 
                   <div class="form-outline mb-2">
-                    <textarea
+                    {/* <textarea
                       type="text"
                       class="form-control"
                       value={values.code}
@@ -143,7 +143,18 @@ const Addcode = () => {
                     ></textarea>
                     <label class="form-label" for="form4Example3">
                       Code
-                    </label>
+                    </label> */}
+                    <TextField multiline
+                    rows={4}
+                      class="form-control"
+                      value={values.code}
+                      onChange={handleChange}
+                      id="code"
+                      // sx={{ mt: 1 }}
+                      fullWidth
+                      label="Code"
+                      type="text"
+                    />
                   </div>
 
                   <label>Select Image </label>
