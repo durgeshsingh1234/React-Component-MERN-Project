@@ -59,7 +59,7 @@
     display: none;
   }
  .card-body{
-  height: 75vh;
+  /* height: 75vh; */
  }
  .formsignup{
   padding-top: 1rem;

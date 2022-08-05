@@ -8,6 +8,8 @@ const Viewer = () => {
 
   const { id }= useParams();
 
+  // const 
+
  return (
     <div className='viewer'>
         <h3 style={{color:'black'}}> <b>Component Name</b> </h3>

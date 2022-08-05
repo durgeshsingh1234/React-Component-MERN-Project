@@ -32,11 +32,9 @@ const Browse = () => {
             class="card-img-top" alt="Laptop" />
           <div class="card-body">
 
-            <div class="d-flex justify-content-between mb-3">
-              <h5 class="mb-0">{title}</h5>
-              <h5 class="text-dark mb-0">$999</h5>
-            </div>
-
+              <h4 class="mb-0">{title}</h4>
+              <p class="text-dark fw-bold text-muted">{uploadedBy.fname} {uploadedBy.lname}</p>
+            
             <button className='btn btn-primary mt-5 float-end' onClick={e => navigate('/viewer/'+_id)}>View</button>
           </div>
         </div>

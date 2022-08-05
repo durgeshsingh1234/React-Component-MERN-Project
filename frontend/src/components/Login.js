@@ -34,9 +34,9 @@ const Login = () => {
         title: "well done👍",
         text: "You have done a wonderfull job!!",
       });
-      navigate("/addcode");
       const data = await response.json();
       sessionStorage.setItem("user", JSON.stringify(data));
+      navigate("/addcode");
     } else {
       console.log("Login Error");
       Swal.fire({
