@@ -54,10 +54,10 @@ const Login = () => {
     email: Yup.string().email("Invalid email").required("Required"),
   });
   return (
-    <div className="container">
-      <div className="col-md-4 mx-auto bg-light">
+      <div className="container1">
+      <div className="col-md-4 mx-auto">
         <div className="cards mt-5">
-          <div className="card-body">
+          <div className="card-body1">
             <Formik
               initialValues={{
                 email: "",
@@ -76,6 +76,7 @@ const Login = () => {
                 //   </div>
                 //   <div className="col-md-6">
                 // <Card className='logincard'>
+               
                 <form
                   className="Loginform"
                   onSubmit={handleSubmit}
@@ -93,7 +94,7 @@ const Login = () => {
                       value={values.email}
                       onChange={handleChange}
                       id="email"
-                      sx={{ mt: 1 }}
+                      // sx={{ mt: 1 }}
                       fullWidth
                       label="Email"
                       helperText={errors.email}
@@ -101,15 +102,15 @@ const Login = () => {
                     />
                   </div>
 
-                  <div class="form-outline mb-4">
+                  <div class="form-outline mb-4 roundborder">
                     {/* <input type="password" value={values.password} onChange={handleChange} id="password" class="form-control" helperText={errors.password} error={errors.password?true:false} />
     <label class="form-label" for="form2Example2">Password</label> */}
-                    <TextField
-                      class="form-control"
+                    <TextField 
+                      className="form-control"
                       value={values.password}
                       onChange={handleChange}
                       id="password"
-                      sx={{ mt: 1 }}
+                      // sx={{ mt: 1 }}
                       fullWidth
                       label="Password"
                       type="password"
@@ -162,6 +163,7 @@ const Login = () => {
     </button> */}
                   </div>
                 </form>
+                
                 // </Card>
                 // </div>
                 // </div>
@@ -172,6 +174,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+   
   );
 };
 export default Login;

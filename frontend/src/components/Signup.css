@@ -53,6 +53,7 @@
   }
   .custom5{
     position:relative;
+    
   }
   .custom6{
     display: none;
@@ -64,3 +65,7 @@
   padding-top: 1rem;
   
  }
+ .overflow-hidden{
+  height: 695px;
+ }
+ 
