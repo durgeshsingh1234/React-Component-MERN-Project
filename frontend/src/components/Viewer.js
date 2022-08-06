@@ -32,10 +32,14 @@ const Viewer = () => {
       return (
         <div>
           <h1>{compData.title}</h1>
-          <h3>By {compData.uploadedBy.fname} {compData.uploadedBy.lname}</h3>
+          {/* <h3>By {compData.uploadedBy.fname} {compData.uploadedBy.lname}</h3> */}
         <div className='card'>
           <div className="card-body">
           <JsxParser jsx={compData.code} />
+          <br />
+          
+          <br />
+          <br />
           </div>
           
           <div>
@@ -43,7 +47,9 @@ const Viewer = () => {
         </div>
           
           </div>
+          
         </div>
+        
       )
     }
   }
@@ -51,7 +57,14 @@ const Viewer = () => {
  return (
     <div className='viewer'>
         {displayComponent()}
+        <div className='p-4 bg-light'>
+          <h6 className='text-black' style={{fontFamily : 'monospace'}}>
+            {compData ? compData.description : ''}
+          </h6>
+        </div>
         <Button  variant="contained" type="submit" color='primary' sx={{mt:5}}>Share Code</Button>
+        <br />
+        <br />
         <div className='p-4 bg-dark'>
           <h6 className='text-white' style={{fontFamily : 'monospace'}}>
             {compData ? compData.code : ''}

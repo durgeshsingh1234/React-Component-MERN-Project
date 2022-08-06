@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-
+import "./Browse.css";
 const Browse = () => {
 
   const url="http://localhost:5000";
@@ -23,16 +23,16 @@ const Browse = () => {
 
       const displayComponents = () => {
         if(!loading){
-          return components.map(({_id, thumbnail, uploadedBy, title}) => (
+          return components.map(({_id, thumbnail, uploadedBy, title,description}) => (
             <div class="col-md-12 col-lg-4 mb-4 mb-lg-0">
-        <div class="card">
+        <div class="card mt-4">
           
           <img src={url+"/"+thumbnail}
-            class="card-img-top" alt="Laptop" />
+            class="card-img-top" alt=" Component image" />
           <div class="card-body">
 
               <h4 class="mb-0">{title}</h4>
-              <p class="text-dark fw-bold text-muted">{uploadedBy.fname} {uploadedBy.lname}</p>
+              {/* <p class="text-dark fw-bold text-muted">{uploadedBy.fname} {uploadedBy.lname}</p> */}
             
             <button className='btn btn-primary mt-5 float-end' onClick={e => navigate('/viewer/'+_id)}>View</button>
           </div>
