@@ -4,3 +4,14 @@
 .browsediv{
     height: 500px;
 }
+.browsebackground{
+    background-image: url('https://images.unsplash.com/photo-1617069489895-76388f95886a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8cGxhbmUlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-size: cover;
+}
+.browseheader{
+    background-image: url('https://i.ytimg.com/vi/ssIs_FvKNo4/maxresdefault.jpg');
+     height: 400px;
+}
+.mask{
+    background-color: rgba(0, 0, 0, 0.6);
+}
