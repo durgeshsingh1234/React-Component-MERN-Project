@@ -49,7 +49,7 @@ const Browse = () => {
       <div>
       <header>
  
-  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+  {/* <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
@@ -61,7 +61,7 @@ const Browse = () => {
         aria-label="Toggle navigation"
       >
         <i class="fas fa-bars"></i>
-      </button>
+      </button> */}
       {/* <div class="collapse navbar-collapse" id="navbarExample01">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item active">
@@ -78,17 +78,17 @@ const Browse = () => {
           </li>
         </ul>
       </div> */}
-    </div>
+    {/* </div>
   </nav>
-  
+   */}
 
   
   <div class=" browseheader p-5 text-center bg-image">
     <div class="mask">
       <div class="d-flex justify-content-center align-items-center h-100">
         <div class="text-white">
-          <h1 class="mb-3">Components</h1>
-          <h4 class="mb-3">Showcase of various components</h4>
+          {/* <h1 class="mb-3">Components</h1>
+          <h4 class="mb-3">Showcase of various components</h4> */}
           {/* <a class="btn btn-outline-light btn-lg" href="#!" role="button"
           >Call to action</a
           > */}
@@ -108,7 +108,7 @@ const Browse = () => {
     <input type="search" id="form1" class="form-control" />
     <label class="form-label" for="form1">Search</label>
   </div>
-  <button type="button" class="btn btn-success">
+  <button type="button" class="btn btn-primary">
     <i class="fas fa-search"></i>
   </button>
 </div>

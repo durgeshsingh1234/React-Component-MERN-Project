@@ -1,8 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { startTransition, useEffect, useState } from 'react'
 import {Button} from '@mui/material';
 import JsxParser from 'react-jsx-parser';
 import { useParams } from 'react-router-dom';
 const Viewer = () => {
+  
+  
+
+  // copy code button end
 
 
   const { id }= useParams();
@@ -62,7 +66,15 @@ const Viewer = () => {
             {compData ? compData.description : ''}
           </h6>
         </div>
-        <Button  variant="contained" type="submit" color='primary' sx={{mt:5}}>Share Code</Button>
+        
+<input type="text" value="Hello World" id="myInput"/>
+
+
+<button onClick={() => {
+  navigator.clipboard.writeText(compData.code);
+}}>Copy Code</button>
+       
+        {/* <Button  variant="contained" type="submit" color='primary' sx={{mt:5}}  >Share Code</Button> */}
         <br />
         <br />
         <div className='p-4 bg-dark'>
@@ -73,5 +85,7 @@ const Viewer = () => {
     </div>
   )
 }
+
+
 
 export default Viewer
