@@ -2,6 +2,7 @@ import React, { startTransition, useEffect, useState } from 'react'
 import {Button} from '@mui/material';
 import JsxParser from 'react-jsx-parser';
 import { useParams } from 'react-router-dom';
+import "./Viewer.css";
 const Viewer = () => {
   
   
@@ -61,16 +62,19 @@ const Viewer = () => {
  return (
     <div className='viewer'>
         {displayComponent()}
-        <div className='p-4 bg-light'>
+        <br />
+        <div className='descriptiondiv p-4 bg-light'>
+          <h2 style={{color:"black"}}>Description-</h2>
           <h6 className='text-black' style={{fontFamily : 'monospace'}}>
             {compData ? compData.description : ''}
           </h6>
         </div>
+        <br />
         
-<input type="text" value="Hello World" id="myInput"/>
+{/* <input type="text" value="Hello World" id="myInput"/> */}
 
 
-<button onClick={() => {
+<button className='bg-dark' style={{color:"white"}}  onClick={() => {
   navigator.clipboard.writeText(compData.code);
 }}>Copy Code</button>
        
@@ -78,6 +82,7 @@ const Viewer = () => {
         <br />
         <br />
         <div className='p-4 bg-dark'>
+          <h2 style={{color:"white"}}>Code-</h2>
           <h6 className='text-white' style={{fontFamily : 'monospace'}}>
             {compData ? compData.code : ''}
           </h6>

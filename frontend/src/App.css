@@ -54,7 +54,7 @@
 } */
 
 /* For Browse Page */
-.browsesearchbar{
+/* .browsesearchbar{
   
   margin-left: 35rem;
   padding-top: 2rem;
@@ -62,13 +62,13 @@
 .browsebackground{
   background-color: #ff5733;
   min-height: 100vh;
-}
+} */
 
 
 
 
 /* For Viewer page */
-.viewerdiv{
+/* .viewerdiv{
   min-height: 40vh;
   background-color: red;
   margin-top: 2rem;
@@ -83,7 +83,7 @@
   margin-top: 2rem;
   margin-left: 2rem;
   margin-right: 2rem;
-}
+} */
 .forgetpasswordform{
   margin-top: 8rem;
   margin-left: 30rem;
