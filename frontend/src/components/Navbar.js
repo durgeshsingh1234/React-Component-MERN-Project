@@ -1,6 +1,6 @@
 import React from 'react'
 import {NavLink} from "react-router-dom";
-
+import {Button} from '@mui/material';
 const Navbar = () => {
   return (
     <div>
@@ -34,12 +34,12 @@ const Navbar = () => {
           
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           
-            <li class="nav-item">
+            {/* <li class="nav-item">
               <NavLink className="nav-link" to="/Signup">Signup</NavLink>
-            </li>
-            <li class="nav-item">
+            </li> */}
+            {/* <li class="nav-item">
               <NavLink className="nav-link" to="/Login">Login</NavLink>
-            </li>
+            </li> */}
             <li class="nav-item">
               <NavLink className="nav-link" to="/Addcode">Addcode</NavLink>
             </li>
@@ -61,6 +61,9 @@ const Navbar = () => {
           {/* <a class="text-reset me-3" href="#">
             <i class="fas fa-shopping-cart"></i>
           </a> */}
+          <Button>
+          <NavLink className="nav-link" to="/Signup">Signup</NavLink>
+          </Button>
     
           
           <div class="dropdown">
@@ -74,6 +77,9 @@ const Navbar = () => {
             >
               {/* <i class="fas fa-bell"></i>
               <span class="badge rounded-pill badge-notification bg-danger">1</span> */}
+              <Button>
+              <NavLink className="nav-link" to="/Login">Login</NavLink>
+              </Button>
             </a>
             <ul
               class="dropdown-menu dropdown-menu-end"
@@ -91,13 +97,14 @@ const Navbar = () => {
               data-mdb-toggle="dropdown"
               aria-expanded="false"
             >
-              <img
+              {/* <img
                 src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                 class="rounded-circle"
                 height="25"
                 alt="Black and White Portrait of a Man"
                 loading="lazy"
-              />
+              /> */}
+              <Button>Logout</Button>
             </a>
             <ul
               class="dropdown-menu dropdown-menu-end"
